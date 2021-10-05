@@ -111,7 +111,7 @@ def ticktick_list_to_todoist_df(task_list):
             assign(TYPE="task",
                    # Todoist CSV format won't allow for task notes, so pull any notes into task title
                    CONTENT=lambda x: [' - '.join([t, c]) if c else t for (t,c) in zip(x.title, x.content)],
-                   PRIORITY=1,
+                   PRIORITY=4,
                    INDENT=lambda x: x.level,
                    AUTHOR="",
                    RESPONSIBLE="",
